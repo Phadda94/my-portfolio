@@ -1,0 +1,27 @@
+.page {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.title-container {
+  margin-top: 40vh;
+  align-items: center;
+  letter-spacing: 1.5px;
+}
+
+.title {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 0;
+  margin-left: 18vw;
+  color: var(--main-txt-color);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.sub-title {
+  margin-top: 0;
+  margin-left: 18vw;
+  width: fit-content;
+  color: var(--txt-color1);
+  font-size: clamp(1rem, 2vw, 2.5rem);
+}
