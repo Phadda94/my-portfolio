@@ -50,7 +50,14 @@ export default function Skills() {
       </div>
 
       <Swiper
-        spaceBetween={-150}
+        breakpoints={{
+          768: {
+            spaceBetween: 10,
+          },
+          1280: {
+            spaceBetween: -150,
+          },
+        }}
         slidesPerView={1.5}
         centeredSlides={true}
         grabCursor={true}

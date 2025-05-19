@@ -80,6 +80,7 @@
   transition: .5s;
   border-bottom: 1px solid var(--border-color);
   height: 3vh;
+  z-index: 20;
 
     /* Specifica separatamente: */
   transition-property: transform, color;
@@ -114,9 +115,10 @@
   transform: scaleX(1);
 }
 
-.list a {
+.mobile-list a {
   text-decoration: none;
   color: inherit;
+  z-index: 20;
 }
 
 /* CHILDREN */

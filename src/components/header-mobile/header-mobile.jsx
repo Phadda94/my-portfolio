@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect} from "react";
+import { Link } from "react-router-dom";
 import "./header-mobile.css";
 
 export default function HeaderMobile() {
@@ -40,8 +41,8 @@ export default function HeaderMobile() {
 
       <div className={`mobile-header ${menuOpen ? "open" : ""}`} ref={menuRef}>
         <ul className="mobile-list">
-          <li className="mobile-item underline-animated">Home</li>
-          <li className="mobile-item underline-animated">Skills</li>
+          <li className="mobile-item underline-animated"><Link to="/">Home</Link></li>
+          <li className="mobile-item underline-animated"><Link to="/skills">Skills</Link></li>
           <li className="mobile-item underline-animated">Certificates</li>
           <li className="mobile-item underline-animated">About</li>
         </ul>

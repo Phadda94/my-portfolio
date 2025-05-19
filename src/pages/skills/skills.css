@@ -11,7 +11,8 @@
   border: none;
   cursor: pointer;
   transition: 0.4s;
-  color: var(--main-txt-color1)
+  color: var(--main-txt-color1);
+  z-index: 10;
 }
 
 .skill-icon:hover {
@@ -48,4 +49,15 @@
 .cert-card p {
   color: var(--txt-color1);
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+
+  .skills-bar {
+    margin-top: 30vh;
+  }
+
+  .cert-card img {
+    width: 100%;
+  }
 }
