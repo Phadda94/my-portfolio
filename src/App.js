@@ -1,7 +1,8 @@
 // src/App.js
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
+import Home from './pages/home/home.jsx';
+import Skills from "./pages/skills/skills.jsx"
 import HeaderDesktop from './components/header-desktop/header-desktop';
 import HeaderMobile from './components/header-mobile/header-mobile';
 import Footer from './components/footer/footer.tsx';
@@ -35,6 +36,7 @@ function App() {
       {/* Pagine */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/skills" element={<Skills />} />
         {/* Aggiungi altre pagine qui se servono */}
       </Routes>
       <Footer />
