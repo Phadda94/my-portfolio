@@ -1,15 +1,20 @@
 .homepage {
+  display: flex;
   margin: 0 !important;
   padding: 0 !important;
+  overflow: hidden;
+  height: 90vh;
 }
 
 .title-container {
   margin-top: 40vh;
+  height: fit-content;
   align-items: center;
   letter-spacing: 1.5px;
 }
 
 .title {
+  animation: title-zoom 6s linear infinite;
   width: fit-content;
   margin: auto;
   margin-bottom: 0;
@@ -19,9 +24,59 @@
 }
 
 .sub-title {
+  animation: title-zoom 6s linear infinite;
   margin-top: 0;
   margin-left: 18vw;
   width: fit-content;
   color: var(--txt-color1);
   font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+.cv-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6%;
+  height: 12%;
+  margin-left: 18vw;
+  margin-top: 44vh;
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--black1-color);
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+  background: 
+    radial-gradient(circle at center, var(--main-txt-color) 25%, transparent 70%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 255, 204, 0.2),
+      black 30px,
+      rgba(0, 255, 204, 0.4) 70px
+    );
+  background: radial-gradient(circle at center, var(--main-txt-color) 20%, var(--black-color1) 80%);
+  background-size: 150% 100%;
+  background-position: 0% 50%;
+  animation: rotate-light 3s linear infinite;
+  border-radius: 50%;
+  border: 1px solid var(--txt-color1);
+}
+
+.cv-link:hover {
+  background-color: var(--white-color1);
+  box-shadow: 0 0 20px var(--main-txt-color);
+  color: var(--white-color1);
+}
+
+@keyframes rotate-light {
+  0%   { background-position-x: 0%; }
+  100% { background-position-x: 100%; }
+}
+@keyframes title-zoom {
+  0%   { transform: scale(1); opacity: 0.6; }
+  25%  { transform: scale(1.02); opacity: 0.85; }
+  50%  { transform: scale(1.06); opacity: 1; }
+  75%  { transform: scale(1.02); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 0.6; }
 }

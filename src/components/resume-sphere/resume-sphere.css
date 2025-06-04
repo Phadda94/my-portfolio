@@ -1,0 +1,43 @@
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 20vw;
+  margin: auto;
+}
+
+.resume-sphere {
+  position: relative;
+  width: 8vw;
+  height: 8vw;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #17eebc, black);
+  box-shadow: 0 0 30px #17eebc;
+  display: flex;
+  transition: 0.4s;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.resume-sphere:hover {
+  box-shadow: 0 0 40px white;
+  color: black
+}
+
+.resume-sphere:hover .resume-text {
+  color: black;
+}
+
+
+.resume-text {
+  color: var(--white-color1);
+  font-weight: bold;
+  font-size: 1.2vw;
+  text-align: center;
+  z-index: 1;
+  transition: 0.4s;
+}
+

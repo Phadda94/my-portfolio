@@ -48,6 +48,11 @@
   color: inherit;
 }
 
+.item.active a {
+  color: var(--white-color1);
+  text-shadow: 0px 0px 10px var(--main-txt-color1);
+}
+
 @keyframes header-items {
   0% {
     transform: rotate(0);

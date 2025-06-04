@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp } from 'react-icons/fa';
+import { AnimatePresence, motion } from 'framer-motion';
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./skills.css";
 
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp } from 'react-icons/fa';
 
 import HtmlCert1 from '../../assets/cert/html_cert.svg';
 import CssCert1 from '../../assets/cert/css_cert.svg';
@@ -34,46 +36,60 @@ export default function Skills() {
   );
 
   return (
-    <div className="skills-page">
-      <div className="skills-bar">
-        {skills.map((skill) => (
-          <button
-            key={skill.name}
-            onClick={() => setActiveSkill(skill.name)}
-            className={`skill-icon ${
-              activeSkill === skill.name ? 'active' : ''
-            }`}
-          >
-            {skill.icon}
-          </button>
-        ))}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 50 }}
+      transition={{ duration: 0.4 }}
+    >
+      <div className="skills-page">
+        <div className="skills-bar">
+          {skills.map((skill) => (
+            <button
+              key={skill.name}
+              onClick={() => setActiveSkill(skill.name)}
+              className={`skill-icon ${
+                activeSkill === skill.name ? 'active' : ''
+              }`}
+            >
+              {skill.icon}
+            </button>
+          ))}
+        </div>
+
+<AnimatePresence mode="wait" initial={false}>
+  <Swiper
+    key={activeSkill} // 🔁 forza remount quando cambia skill
+    breakpoints={{
+      768: { spaceBetween: 10 },
+      1280: { spaceBetween: -150 },
+    }}
+    slidesPerView={1.5}
+    centeredSlides={true}
+    grabCursor={true}
+    pagination={{ clickable: true }}
+    navigation={false}
+    className="certificates-carousel"
+  >
+    {filteredCertificates.map((cert) => (
+      <SwiperSlide key={cert.id}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.3 }}
+          className="cert-card"
+        >
+          <img src={cert.image} alt={cert.title} />
+          <p>{cert.title}</p>
+        </motion.div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</AnimatePresence>
+
       </div>
 
-      <Swiper
-        breakpoints={{
-          768: {
-            spaceBetween: 10,
-          },
-          1280: {
-            spaceBetween: -150,
-          },
-        }}
-        slidesPerView={1.5}
-        centeredSlides={true}
-        grabCursor={true}
-        pagination={{ clickable: true }}
-        navigation={false}
-        className="certificates-carousel"
-      >
-        {filteredCertificates.map((cert) => (
-          <SwiperSlide key={cert.id}>
-            <div className="cert-card">
-              <img src={cert.image} alt={cert.title} />
-              <p>{cert.title}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    </motion.div>
   );
 }

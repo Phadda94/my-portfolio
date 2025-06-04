@@ -116,9 +116,19 @@
 }
 
 .mobile-list a {
+  display: block;
   text-decoration: none;
   color: inherit;
   z-index: 20;
+}
+
+.mobile-item.active {
+  color: var(--white-color1);
+  text-shadow: 0px 0px 10px var(--main-txt-color);
+}
+
+.underline-animated.active::after {
+  transform: scaleX(1);
 }
 
 /* CHILDREN */

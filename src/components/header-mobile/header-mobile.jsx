@@ -1,11 +1,12 @@
 import { useState, useRef, useEffect} from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./header-mobile.css";
 
 export default function HeaderMobile() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef();
   const buttonRef = useRef();
+  const location = useLocation();
 
   // Chiudi menu cliccando fuori da menu e bottone
   useEffect(() => {
@@ -41,9 +42,13 @@ export default function HeaderMobile() {
 
       <div className={`mobile-header ${menuOpen ? "open" : ""}`} ref={menuRef}>
         <ul className="mobile-list">
-          <li className="mobile-item underline-animated"><Link to="/">Home</Link></li>
-          <li className="mobile-item underline-animated"><Link to="/skills">Skills</Link></li>
-          <li className="mobile-item underline-animated">Certificates</li>
+          <li className={`mobile-item underline-animated ${location.pathname === "/" ? "active" : ""}`}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={`mobile-item underline-animated ${location.pathname === "/skills" ? "active" : ""}`}>
+            <Link to="/skills">Skills</Link>
+          </li>
+          <li className="mobile-item underline-animated">Projects</li>
           <li className="mobile-item underline-animated">About</li>
         </ul>
       </div>
