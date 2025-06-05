@@ -12,7 +12,6 @@
   height: fit-content;
   align-items: center;
   letter-spacing: 1.5px;
-  text-shadow: 0 0 10px var(--black-color1);
 }
 
 .title {
@@ -20,8 +19,20 @@
   margin: auto;
   margin-bottom: 0;
   margin-left: 18vw;
-  color: var(--main-txt-color);
+  color: transparent;
   font-size: clamp(2rem, 4vw, 6rem);
+  background: linear-gradient(180deg, var(--main-txt-color) 60%, var(--black-color1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.federico {
+  color: transparent;
+  background: linear-gradient(180deg, var(--white-color1) 60%, var(--black-color1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .sub-title {
@@ -29,7 +40,11 @@
   margin-top: 0;
   margin-left: 18vw;
   width: fit-content;
-  color: var(--txt-color1);
+  color: transparent;
+  background: linear-gradient(180deg, var(--main-txt-color1) 70%, var(--black-color1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: clamp(1rem, 2vw, 2.5rem);
 }
 

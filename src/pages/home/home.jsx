@@ -17,7 +17,7 @@ export default function Home() {
 
     <div className="homepage">
       <div className="title-container">
-        <h1 className="title">Hi! I'm Federico</h1>
+        <h1 className="title">Hi! I'm&nbsp;<span className="federico">Federico</span></h1>
         <h2 className="sub-title">Junior Web Developer</h2>
       </div>
     <ResumeSphere></ResumeSphere>
