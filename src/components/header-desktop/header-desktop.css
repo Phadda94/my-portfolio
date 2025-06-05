@@ -1,5 +1,7 @@
 .header-desktop {
   position: fixed;
+  height: 80px;
+  align-content: center;
   top: 0;
   width: 100%;
   background-color: var(--black-transparent);

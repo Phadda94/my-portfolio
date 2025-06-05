@@ -79,7 +79,7 @@
   transform: translateX(-130%);
   transition: .5s;
   border-bottom: 1px solid var(--border-color);
-  height: 3vh;
+  height: 25px;
   z-index: 20;
 
     /* Specifica separatamente: */
