@@ -13,9 +13,11 @@
   height: 8vw;
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, #17eebc, black);
-  box-shadow: 0 0 30px #17eebc;
+  background-color: transparent;
+  box-shadow: 0 0 30px var(--soft-shadow-color);
   display: flex;
   transition: 0.4s;
+  animation: gradient-shift 5s ease infinite;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -24,7 +26,6 @@
 
 .resume-sphere:hover {
   box-shadow: 0 0 40px white;
-  color: black
 }
 
 .resume-sphere:hover .resume-text {
@@ -41,3 +42,11 @@
   transition: 0.4s;
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
