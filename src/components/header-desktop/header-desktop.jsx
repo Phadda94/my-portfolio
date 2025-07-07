@@ -25,7 +25,9 @@ export default function HeaderDesktop() {
         <li className={`item ${location.pathname === "/skills" ? "active" : ""}`}>
           <Link to="/skills">Skills</Link>
         </li>
-        <li className="item">Projects</li>
+        <li className={`item ${location.pathname === "/projects" ? "active" : ""}`}>
+          <Link to="/projects">Projects</Link>
+        </li>
         <li className="item">About</li>
       </ul>
     </div>

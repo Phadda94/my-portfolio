@@ -48,7 +48,9 @@ export default function HeaderMobile() {
           <li className={`mobile-item underline-animated ${location.pathname === "/skills" ? "active" : ""}`}>
             <Link to="/skills">Skills</Link>
           </li>
-          <li className="mobile-item underline-animated">Projects</li>
+          <li className={`mobile-item underline-animated ${location.pathname === "/projects" ? "active" : ""}`}>
+            <Link to="/projects">Projects</Link>
+          </li>
           <li className="mobile-item underline-animated">About</li>
         </ul>
       </div>

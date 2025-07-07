@@ -4,10 +4,13 @@ import { AnimatePresence } from 'framer-motion';
 
 import Home from './pages/home/home.jsx';
 import Skills from "./pages/skills/skills.jsx";
+import Projects from './pages/projects/projects.jsx';
+
 import HeaderDesktop from './components/header-desktop/header-desktop';
 import HeaderMobile from './components/header-mobile/header-mobile';
 import Footer from './components/footer/footer.tsx';
 import ParticlesBackground from './components/particles-background/particles.tsx';
+
 import './App.css';
 
 function AnimatedRoutes({ isMobile }) {
@@ -18,6 +21,7 @@ function AnimatedRoutes({ isMobile }) {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </AnimatePresence>
   );
@@ -36,12 +40,13 @@ function App() {
 
   return (
     <BrowserRouter basename='/PORTFOLIO'>
-      <ParticlesBackground />
+      <ParticlesBackground /> 
       {isMobile ? <HeaderMobile key="mobile" /> : <HeaderDesktop key="desktop" />}
       <AnimatedRoutes isMobile={isMobile} />
       <Footer />
     </BrowserRouter>
   );
 }
+
 
 export default App;
