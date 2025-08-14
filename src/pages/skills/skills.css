@@ -46,7 +46,7 @@
   object-fit: contain;
   margin-bottom: 0.5rem;
   filter: drop-shadow(0 0 10px var(--txt-color1));
-  opacity: 0.5;
+  opacity: 0.3;
   transition: all 0.4s ease;
 }
 
@@ -62,7 +62,7 @@
 .cert-card.selected img {
   filter: drop-shadow(0 0 20px var(--txt-color1));
   transform: rotateY(0deg);
-  opacity: 0.9;
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 768px) {
