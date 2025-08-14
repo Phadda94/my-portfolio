@@ -2,8 +2,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-top: 12vh;
-}
+  margin-top: 18vh;}
 
 .skill-icon {
   font-size: 3rem;
@@ -27,7 +26,7 @@
 .certificates-carousel {
   width: 75%;
   height: 100%;
-  padding: 2rem 0;
+  padding: 0 0 2rem 0;
 }
 
 .cert-card {
@@ -72,7 +71,17 @@
     margin-top: 30vh;
   }
 
-  .cert-card img {
-    width: 100%;
+  .cert-card {
+    padding-top: 3vh;
   }
+
+  .cert-card img {
+    width: 100%; 
+  }
+
+  .cert-card.selected img {
+  filter: drop-shadow(0 0 10px var(--txt-color1));
+  transform: rotateY(0deg);
+  opacity: 0.9;
+}
 }
