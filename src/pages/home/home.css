@@ -1,0 +1,78 @@
+.homepage {
+  display: flex;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  height: 90vh;
+}
+
+.title-container {
+  margin: auto;
+  margin-left: 5%;
+  height: fit-content;
+  align-items: center;
+  letter-spacing: 1.5px;
+}
+
+.title {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 0;
+  margin-left: 18vw;
+  color: transparent;
+  font-size: clamp(2rem, 4vw, 6rem);
+  background: linear-gradient(180deg, var(--main-txt-color) 60%, var(--black-color1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.federico {
+  color: transparent;
+  background: linear-gradient(180deg, var(--white-color1) 60%, var(--black-color1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub-title {
+  animation: title-zoom 6s linear infinite;
+  margin-top: 0;
+  margin-left: 18vw;
+  width: fit-content;
+  color: transparent;
+  background: linear-gradient(180deg, var(--main-txt-color1) 70%, var(--black-color1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .homepage {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .title-container {
+    margin: auto;
+    display: inline-block;
+    width: 100vw;
+    margin-top: 35cqmax;
+  }
+  
+  .title {
+    display: flex;
+    font-size: clamp(1.5rem, 8vw, 4.5rem);
+    margin: auto;
+  }
+  
+  .sub-title {
+    display: flex;
+    margin: auto;
+    font-size: clamp(0.8rem, 4vw, 3rem);
+  }
+
+}

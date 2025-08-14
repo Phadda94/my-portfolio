@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+
+
 import "./header-desktop.css";
 
 export default function HeaderDesktop() {
   const [visible, setVisible] = useState(true);
-
+  const location = useLocation();
+  
   useEffect(() => {
     const handleMouse = (e) => {
       setVisible(e.clientY <= 85);
@@ -15,9 +19,15 @@ export default function HeaderDesktop() {
   return (
     <div className={`header-desktop ${visible ? "show" : "hide"}`}>
       <ul className="list">
-        <li className="item">Home</li>
-        <li className="item">Skills</li>
-        <li className="item">Certificates</li>
+        <li className={`item ${location.pathname === "/" ? "active" : ""}`}>
+          <Link to="/">Home</Link>
+        </li>
+        <li className={`item ${location.pathname === "/skills" ? "active" : ""}`}>
+          <Link to="/skills">Skills</Link>
+        </li>
+        <li className={`item ${location.pathname === "/projects" ? "active" : ""}`}>
+          <Link to="/projects">Projects</Link>
+        </li>
         <li className="item">About</li>
       </ul>
     </div>

@@ -1,0 +1,87 @@
+.skills-bar {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 18vh;}
+
+.skill-icon {
+  font-size: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+  color: var(--main-txt-color1);
+  z-index: 10;
+}
+
+.skill-icon:hover {
+  filter: drop-shadow(0 0 20px var(--white-color1));
+}
+
+.skill-icon.active {
+  transform: scale(1.2);
+  color: var(--white-color1);
+}
+
+.certificates-carousel {
+  width: 75%;
+  height: 100%;
+  padding: 0 0 2rem 0;
+}
+
+.cert-card {
+  display: flex;
+  margin-top: 10%;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: all .4s ease;
+}
+
+.cert-card img {
+  transform: rotateY(180deg);
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 10px var(--txt-color1));
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+
+.cert-card p {
+  color: var(--txt-color1);
+  font-weight: bold;
+}
+
+.cert-card.selected {
+  transform: scale(1.25) !important;
+}
+
+.cert-card.selected img {
+  filter: drop-shadow(0 0 20px var(--txt-color1));
+  transform: rotateY(0deg);
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+
+  .skills-bar {
+    margin-top: 30vh;
+  }
+
+  .cert-card {
+    padding-top: 3vh;
+  }
+
+  .cert-card img {
+    width: 100%; 
+  }
+
+  .cert-card.selected img {
+  filter: drop-shadow(0 0 10px var(--txt-color1));
+  transform: rotateY(0deg);
+  opacity: 0.9;
+}
+}
