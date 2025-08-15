@@ -35,8 +35,13 @@
   width: 100%;
   height: auto;
   display: block;
+  opacity: 0.7;
+  transition: ease 0.6s;
 }
 
+.projects-grid img:hover {
+  opacity: 1;
+}
 
 @media screen and (max-width: 768px) {
 
