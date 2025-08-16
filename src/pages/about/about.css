@@ -15,8 +15,16 @@
 .about-description {
   display: flex;
   font-weight: 400;
-  font-size: clamp(2px 3rem 3rem);
+  text-align: justify;
+  font-size: calc(12px + (36 - 12) * ((100vw - 320px) / (2560 - 320)));
   width: 70vw;
   color: var(--white-color1);
   margin: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-description {
+    margin: auto;
+  }
 }
