@@ -1,0 +1,19 @@
+.about-container {
+  overflow: hidden;
+}
+
+.about-title {
+  display: flex;
+  width: fit-content;
+  color: var(--white-color1);
+  margin: auto;
+  margin-top: 20vh;
+  margin-bottom: 4vh;
+}
+
+.about-description {
+  display: flex;
+  width: fit-content;
+  color: var(--white-color1);
+  margin: auto;
+}
