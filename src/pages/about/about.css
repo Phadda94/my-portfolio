@@ -4,7 +4,8 @@
 
 .about-title {
   display: flex;
-  width: fit-content;
+  width: 70vw;
+  text-align: left;
   color: var(--white-color1);
   margin: auto;
   margin-top: 20vh;
@@ -13,7 +14,9 @@
 
 .about-description {
   display: flex;
-  width: fit-content;
+  font-weight: 400;
+  font-size: clamp(2px 3rem 3rem);
+  width: 70vw;
   color: var(--white-color1);
   margin: auto;
 }
