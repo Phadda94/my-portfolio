@@ -1,11 +1,13 @@
 .skills-bar {
   display: flex;
-  gap: 1rem;
+  gap: 5vw;
   justify-content: center;
-  margin-top: 18vh;}
+  margin-top: 25vh;
+  height: 20vh;
+}
 
 .skill-icon {
-  font-size: 3rem;
+  font-size: calc(12px + (144 - 12) * ((100vw - 320px) / (2560 - 320)));
   background: none;
   border: none;
   cursor: pointer;
@@ -24,9 +26,9 @@
 }
 
 .certificates-carousel {
-  width: 75%;
-  height: 100%;
+  width: 60vw;
   padding: 0 0 2rem 0;
+  height: 50vh;
 }
 
 .cert-card {
@@ -41,7 +43,7 @@
 
 .cert-card img {
   transform: rotateY(180deg);
-  width: 50%;
+  width: 40%;
   height: auto;
   object-fit: contain;
   margin-bottom: 0.5rem;
@@ -53,6 +55,7 @@
 .cert-card p {
   color: var(--txt-color1);
   font-weight: bold;
+  font-size: calc(12px + (36 - 12) * ((100vw - 320px) / (2560 - 320)));
 }
 
 .cert-card.selected {
@@ -62,13 +65,21 @@
 .cert-card.selected img {
   filter: drop-shadow(0 0 20px var(--txt-color1));
   transform: rotateY(0deg);
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 768px) {
 
   .skills-bar {
     margin-top: 30vh;
+  }
+
+  .skill-icon {
+    font-size: 10vw;
+  }
+
+  .certificates-carousel {
+    width: 80vw;
   }
 
   .cert-card {
