@@ -41,7 +41,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename='/PORTFOLIO'>
+    <BrowserRouter basename='/my-portfolio'>
       <ParticlesBackground /> 
       {isMobile ? <HeaderMobile key="mobile" /> : <HeaderDesktop key="desktop" />}
       <AnimatedRoutes isMobile={isMobile} />

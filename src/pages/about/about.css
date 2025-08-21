@@ -17,7 +17,7 @@
   font-weight: 400;
   text-align: justify;
   font-size: calc(12px + (36 - 12) * ((100vw - 320px) / (2560 - 320)));
-  width: 70vw;
+  width: 60vw;
   color: var(--white-color1);
   margin: auto;
 }

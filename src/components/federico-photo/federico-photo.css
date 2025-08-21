@@ -1,0 +1,15 @@
+.federico-container {
+  position: fixed;
+  bottom: 9vh;
+  right: 5vw;
+}
+
+.federico-photo {
+  width: 15vw;
+}
+
+@media screen and (max-width: 768px) {
+  .federico-photo {
+    width: 28vw;
+  }
+}
