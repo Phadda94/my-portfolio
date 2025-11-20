@@ -2,14 +2,18 @@ import '../../App.css';
 import './projects.css';
 import { motion } from 'framer-motion';
 
-import KeyPiano from '../../assets/projects-gif/KeyboardPiano.gif';
+import Forecast from '../../assets/projects-gif/Forecast.gif';
+import Consumed from '../../assets/projects-gif/Consumed.gif'
 import ToDoList from '../../assets/projects-gif/Todo List.gif';
+import KeyPiano from '../../assets/projects-gif/KeyboardPiano.gif';
 import SoundsReal from '../../assets/projects-gif/SoundsReal.gif';
 import ComfySite from '../../assets/projects-gif/ComfySite.gif';
 import CaloriesCalc from '../../assets/projects-gif/CaloriesCalculator.gif';
 
 const projects = [
+  { img: Forecast, link: 'https://federico.world/forecast/', title: 'Forecast' },
   { img: ToDoList, link: 'https://federico.world/Todo%20List/', title: 'ToDo List' },
+  { img: Consumed, link: 'https://federico.world/HorrorGameJs/', title: 'Horror WebGame' },
   { img: CaloriesCalc, link: 'https://federico.world/CaloriesCalculator/', title: 'Calories Calculator' },
   { img: SoundsReal, link: 'https://soundsreal.itch.io/', title: 'Sounds Real' },
   { img: ComfySite, link: 'https://federico.world/Comfy_Site/', title: 'Comfy Site' },
