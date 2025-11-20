@@ -18,7 +18,7 @@ export default function ParticlesBackground() {
 
   // densità costante con limiti + throttle
   useEffect(() => {
-    const D = 1000;          // più basso = più denso (prima 17280)
+    const D = 10000;          // più basso = più denso (prima 17280)
     const MIN = 40;
     const MAX = 180;          // cap forte per evitare freeze
 

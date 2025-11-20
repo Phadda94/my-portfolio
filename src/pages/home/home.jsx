@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ResumeSphere from "../../components/resume-sphere/resume-sphere";
+import cvUrl from '../../assets/Federico-Ciceri.pdf';
 
 import '../../App.css';
 import "./home.css";
@@ -20,7 +21,7 @@ export default function Home() {
         <h1 className="title">Hi! I'm&nbsp;<span className="federico">Federico</span></h1>
         <h2 className="sub-title">Junior Web Developer</h2>
       </div>
-    <ResumeSphere></ResumeSphere>
+      <ResumeSphere onClick={() => window.open(cvUrl, '_blank')} />
     </div>
     
     </motion.div>

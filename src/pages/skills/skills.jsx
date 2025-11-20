@@ -105,7 +105,6 @@ export default function Skills() {
           className={`cert-card ${index === activeSlide ? 'selected' : ''}`}
         >
           <img src={cert.image} alt={cert.title} />
-          <p>{cert.title}</p>
         </motion.div>
       </SwiperSlide>
     ))}

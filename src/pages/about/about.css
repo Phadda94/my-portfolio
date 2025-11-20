@@ -1,0 +1,30 @@
+.about-container {
+  overflow: hidden;
+}
+
+.about-title {
+  display: flex;
+  width: 70vw;
+  text-align: left;
+  color: var(--white-color1);
+  margin: auto;
+  margin-top: 20vh;
+  margin-bottom: 4vh;
+}
+
+.about-description {
+  display: flex;
+  font-weight: 400;
+  text-align: justify;
+  font-size: calc(12px + (36 - 12) * ((100vw - 320px) / (2560 - 320)));
+  width: 60vw;
+  color: var(--white-color1);
+  margin: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-description {
+    margin: auto;
+  }
+}

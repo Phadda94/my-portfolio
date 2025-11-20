@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/PORTFOLIO",
+  "homepage": "https://federico.world/my-portfolio",
   "dependencies": {
     "@react-spring/three": "^10.0.1",
     "@react-three/drei": "^10.1.2",

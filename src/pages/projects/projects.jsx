@@ -1,5 +1,6 @@
 import '../../App.css';
 import './projects.css';
+import { motion } from 'framer-motion';
 
 import KeyPiano from '../../assets/projects-gif/KeyboardPiano.gif';
 import ToDoList from '../../assets/projects-gif/Todo List.gif';
@@ -18,6 +19,12 @@ const projects = [
 export default function Projects() {
   return (
     <>
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 50 }}
+      transition={{ duration: 0.4 }}
+    >
       <ul className="projects-grid">
         {projects.map((project, index) => (
           <li key={index}>
@@ -27,6 +34,7 @@ export default function Projects() {
           </li>  
         ))}
       </ul>
+    </motion.div>
     </>
   );
 }
