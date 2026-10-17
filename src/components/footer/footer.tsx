@@ -1,4 +1,3 @@
-
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./footer.css"
 
