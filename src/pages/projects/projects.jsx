@@ -11,13 +11,13 @@ import ComfySite from '../../assets/projects-gif/ComfySite.gif';
 import CaloriesCalc from '../../assets/projects-gif/CaloriesCalculator.gif';
 
 const projects = [
-  { img: Forecast, link: 'https://federico.world/forecast/', title: 'Forecast' },
-  { img: ToDoList, link: 'https://federico.world/Todo%20List/', title: 'ToDo List' },
-  { img: Consumed, link: 'https://federico.world/HorrorGameJs/', title: 'Horror WebGame' },
-  { img: CaloriesCalc, link: 'https://federico.world/CaloriesCalculator/', title: 'Calories Calculator' },
+  { img: Forecast, link: 'https://phadda94.github.io/forecast/', title: 'Forecast' },
+  { img: ToDoList, link: 'https://phadda94.github.io/Todo%20List/', title: 'ToDo List' },
+  { img: Consumed, link: 'https://anvil-of-echoes.itch.io/consumed', title: 'Horror WebGame' },
+  { img: CaloriesCalc, link: 'https://phadda94.github.io/CaloriesCalculator/', title: 'Calories Calculator' },
   { img: SoundsReal, link: 'https://soundsreal.itch.io/', title: 'Sounds Real' },
-  { img: ComfySite, link: 'https://federico.world/Comfy_Site/', title: 'Comfy Site' },
-  { img: KeyPiano, link: 'https://federico.world/keyboardPiano/', title: 'Keyboard Piano' },
+  { img: ComfySite, link: 'https://phadda94.github.io/Comfy_Site/', title: 'Comfy Site' },
+  { img: KeyPiano, link: 'https://phadda94.github.io/keyboardPiano/', title: 'Keyboard Piano' },
 ];
 
 export default function Projects() {
@@ -32,7 +32,7 @@ export default function Projects() {
       <ul className="projects-grid">
         {projects.map((project, index) => (
           <li key={index}>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
+            <a href={project.link} aria-label={`${project.title}${project.sourceOnly ? ": source code on GitHub" : ": open project"}`} target="_blank" rel="noopener noreferrer">
               <img src={project.img} alt={project.title} />
             </a>
           </li>  
