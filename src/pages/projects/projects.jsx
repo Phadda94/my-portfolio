@@ -32,7 +32,7 @@ export default function Projects() {
       <ul className="projects-grid">
         {projects.map((project, index) => (
           <li key={index}>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
+            <a href={project.link} aria-label={`${project.title}${project.sourceOnly ? ": source code on GitHub" : ": open project"}`} target="_blank" rel="noopener noreferrer">
               <img src={project.img} alt={project.title} />
             </a>
           </li>  
