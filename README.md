@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Portfolio di Federico
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio React pubblicato su https://phadda94.github.io/.
 
-## Available Scripts
+## Sviluppo
 
-In the project directory, you can run:
+- `npm ci`: installa le dipendenze.
+- `npm start`: avvia il sito in locale.
+- `npm run build`: genera il sito statico nella cartella `build`.
 
-### `npm start`
+## Pubblicazione su GitHub Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Il codice sorgente rimane in `Phadda94/my-portfolio`; il sito alla radice deve essere pubblicato dal repository `Phadda94/Phadda94.github.io`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Eseguire `npm run build`.
+2. Copiare **il contenuto** di `build` nella radice del repository `Phadda94.github.io`, incluso `.nojekyll`. Non copiare la cartella build come sottocartella.
+3. Conservare le cartelle delle demo: `forecast`, `Todo List`, `CaloriesCalculator`, `Comfy_Site`, `keyboardPiano`.
+4. In Settings > Pages del repository di pubblicazione, selezionare il branch che contiene la build e la cartella `/ (root)`. Le modifiche attuali sono su `link-migration`: pubblicare questo branch oppure unirlo al branch di pubblicazione. Rimuovere un eventuale dominio personalizzato precedente.
+5. Pubblicare le modifiche e verificare home, menu, CV e progetti.
 
-### `npm test`
+La build contiene anche `skills/index.html`, `projects/index.html` e `about/index.html`: consentono l'accesso diretto e il refresh senza errori 404 su GitHub Pages. Include inoltre i reindirizzamenti dai vecchi indirizzi `/my-portfolio/` e dalle tre sezioni corrispondenti.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Collegamenti della migrazione
 
-### `npm run build`
+I link alle cinque demo puntano alle cartelle presenti nel repository di pubblicazione. Horror WebGame collega Consumed su itch.io usando https://anvil-of-echoes.itch.io/consumed, fornito dal proprietario. Il footer collega i profili GitHub e LinkedIn di Federico. CV e certificati usano import locali gestiti dalla build.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Le modifiche al codice non aggiornano automaticamente il repository di pubblicazione.
